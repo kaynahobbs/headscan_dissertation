@@ -52,7 +52,7 @@ my_ft_theme <- function(ft, ...) {
 ```{r}
 #remove identifiers and demographic data
 
-headscan_full<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\headscan_full.xlsx")
+headscan_full<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\headscan_full.xlsx")
 
 headscan_full$AA_C <- headscan_full$AA_C *10
 headscan_full$BGl_C <- headscan_full$BGl_C * 10
@@ -1388,7 +1388,7 @@ flextable(combin_out1) %>%
 
 
 ```{r}
-vis_outliers <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\all_vis_out1.xlsx")
+vis_outliers <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\all_vis_out1.xlsx")
 ```
 
 
