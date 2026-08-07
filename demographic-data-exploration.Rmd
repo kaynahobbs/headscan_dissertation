@@ -40,7 +40,7 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r loading-data}
-headscan_full <- read_excel("C:\\Users\\Kayna\\OneDrive - Colostate\\research topics\\Dissertation\\headscan_dissertation\\headscan_full.xlsx")
+headscan_full <- read_excel("D:\\CSU OneDrive 11.11\\research topics\\Dissertation\\headscan_dissertation\\headscan_full.xlsx")
 headscan_full$coder <- as.factor(headscan_full$coder)
 headscan_full$gender <- as.factor(headscan_full$gender)
 headscan_full$race_eth <- as.factor(headscan_full$race_eth)
