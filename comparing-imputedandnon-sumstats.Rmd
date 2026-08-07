@@ -33,7 +33,7 @@ my_ft_theme <- function(ft, ...) {
 
 ```{r}
 
-chosen_withna <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_withna.xlsx")
+chosen_withna <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_withna.xlsx")
 
 chosen_withna  <- column_to_rownames(chosen_withna,'ID')
 
@@ -192,7 +192,7 @@ flextable(chosen_stats) %>%
 
 
 ```{r}
-chosen_imputed <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_imputed.xlsx")
+chosen_imputed <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_imputed.xlsx")
 ```
 
 
