@@ -1,8 +1,9 @@
 ---
 title: "bivariate panel"
 output:
-  word_document: default
   html_document: default
+  pdf_document: default
+  word_document: default
 date: "2022-08-01"
 ---
 
@@ -18,7 +19,7 @@ library(rstatix)
 ```
 
 ```{r loading data}
-headscan_full1<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\headscan_full1.xlsx")
+headscan_full1<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\headscan_full1.xlsx")
 headscan_full1$coder <- as.factor(headscan_full1$coder)
 headscan_full1$gender <- as.factor(headscan_full1$gender)
 headscan_full1$race_eth <- as.factor(headscan_full1$race_eth)

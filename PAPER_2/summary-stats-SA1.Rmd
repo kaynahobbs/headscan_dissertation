@@ -34,7 +34,7 @@ my_ft_theme <- function(ft, ...) {
 ```
 
 ```{r loading-data}
-headscan_full<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\headscan_full.xlsx")
+headscan_full<-read_excel("D:\\CSU OneDrive 11.11\\research topics\\Dissertation\\headscan_dissertation\\headscan_full.xlsx")
 headscan_full$coder <- as.factor(headscan_full$coder)
 headscan_full$gender <- as.factor(headscan_full$gender)
 headscan_full$race_eth <- as.factor(headscan_full$race_eth)
@@ -234,7 +234,7 @@ flextable(AA_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, AA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, AA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=AA_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -291,7 +291,7 @@ flextable(AA_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, AA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, AA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=AA_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -349,7 +349,7 @@ flextable(AA_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, AA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, AA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=AA_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -452,7 +452,7 @@ flextable(BGl_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, BGl_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, BGl_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BGl_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -509,7 +509,7 @@ flextable(BGl_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, BGl_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, BGl_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BGl_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -569,7 +569,7 @@ flextable(BGl_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, BGl_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, BGl_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BGl_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -673,7 +673,7 @@ flextable(BiW_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, BiW_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, BiW_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -731,7 +731,7 @@ flextable(BiW_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, BiW_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, BiW_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -790,7 +790,7 @@ flextable(BiW_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, BiW_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, BiW_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -897,7 +897,7 @@ flextable(BiW_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, BiW_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, BiW_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -955,7 +955,7 @@ flextable(BiW_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, BiW_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, BiW_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1014,7 +1014,7 @@ flextable(BiW_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, BiW_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, BiW_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=BiW_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1120,7 +1120,7 @@ flextable(ChCh_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, ChCh_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, ChCh_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ChCh_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1178,7 +1178,7 @@ flextable(ChCh_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, ChCh_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, ChCh_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ChCh_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1237,7 +1237,7 @@ flextable(ChCh_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, ChCh_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, ChCh_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ChCh_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1342,7 +1342,7 @@ flextable(GoSub_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1402,7 +1402,7 @@ flextable(GoSub_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1463,7 +1463,7 @@ flextable(GoSub_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1584,7 +1584,7 @@ flextable(GoSub_Crace_sumstats1) %>%
 #boxplot reorderd by median
 GoSub_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1642,7 +1642,7 @@ flextable(GoSub_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 GoSub_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1701,7 +1701,7 @@ flextable(GoSub_Cage_sumstats1) %>%
 #boxplot reorderd by median
 GoSub_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, GoSub_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, GoSub_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=GoSub_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1811,7 +1811,7 @@ flextable(NRB_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1871,7 +1871,7 @@ flextable(NRB_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -1932,7 +1932,7 @@ flextable(NRB_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2050,7 +2050,7 @@ flextable(NRB_Lrace_sumstats1) %>%
 #boxplot reorderd by median
 NRB_L_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2108,7 +2108,7 @@ flextable(NRB_Lgender_sumstats1) %>%
 #boxplot reorderd by median
 NRB_L_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2167,7 +2167,7 @@ flextable(NRB_Lage_sumstats1) %>%
 #boxplot reorderd by median
 NRB_L_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, NRB_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, NRB_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=NRB_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2273,7 +2273,7 @@ flextable(ProA_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, ProA_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, ProA_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2331,7 +2331,7 @@ flextable(ProA_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, ProA_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, ProA_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2390,7 +2390,7 @@ flextable(ProA_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, ProA_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, ProA_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2496,7 +2496,7 @@ flextable(ProA_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, ProA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, ProA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2554,7 +2554,7 @@ flextable(ProA_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, ProA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, ProA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2613,7 +2613,7 @@ flextable(ProA_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, ProA_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, ProA_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProA_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2718,7 +2718,7 @@ flextable(ProS_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, ProS_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, ProS_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2776,7 +2776,7 @@ flextable(ProS_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, ProS_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, ProS_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2835,7 +2835,7 @@ flextable(ProS_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, ProS_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, ProS_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2939,7 +2939,7 @@ flextable(ProS_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, ProS_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, ProS_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -2997,7 +2997,7 @@ flextable(ProS_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, ProS_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, ProS_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3056,7 +3056,7 @@ flextable(ProS_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, ProS_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, ProS_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=ProS_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3160,7 +3160,7 @@ flextable(SelP_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SelP_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SelP_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3217,7 +3217,7 @@ flextable(SelP_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SelP_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SelP_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3276,7 +3276,7 @@ flextable(SelP_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SelP_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SelP_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3381,7 +3381,7 @@ flextable(SelP_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SelP_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SelP_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3438,7 +3438,7 @@ flextable(SelP_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SelP_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SelP_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3496,7 +3496,7 @@ flextable(SelP_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SelP_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SelP_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelP_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3602,7 +3602,7 @@ flextable(SelDH_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3661,7 +3661,7 @@ flextable(SelDH_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3721,7 +3721,7 @@ flextable(SelDH_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3833,7 +3833,7 @@ flextable(SelDH_Crace_sumstats1) %>%
 #boxplot reorderd by median
 SelDH_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3890,7 +3890,7 @@ flextable(SelDH_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 SelDH_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -3948,7 +3948,7 @@ flextable(SelDH_Cage_sumstats1) %>%
 #boxplot reorderd by median
 SelDH_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SelDH_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SelDH_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelDH_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4051,7 +4051,7 @@ flextable(SelM_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SelM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SelM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelM_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4108,7 +4108,7 @@ flextable(SelM_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SelM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SelM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelM_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4167,7 +4167,7 @@ flextable(SelM_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SelM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SelM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SelM_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4272,7 +4272,7 @@ flextable(SnasM_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SnasM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SnasM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4330,7 +4330,7 @@ flextable(SnasM_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SnasM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SnasM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4388,7 +4388,7 @@ flextable(SnasM_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SnasM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SnasM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4493,7 +4493,7 @@ flextable(SnasM_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4553,7 +4553,7 @@ flextable(SnasM_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4612,7 +4612,7 @@ flextable(SnasM_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4725,7 +4725,7 @@ flextable(SnasM_Crace_sumstats1) %>%
 #boxplot reorderd by median
 SnasM_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4783,7 +4783,7 @@ flextable(SnasM_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 SnasM_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4840,7 +4840,7 @@ flextable(SnasM_Cage_sumstats1) %>%
 #boxplot reorderd by median
 SnasM_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SnasM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SnasM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SnasM_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -4947,7 +4947,7 @@ flextable(SmanM_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5007,7 +5007,7 @@ flextable(SmanM_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5067,7 +5067,7 @@ flextable(SmanM_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5179,7 +5179,7 @@ flextable(SmanM_Lrace_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_L_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5238,7 +5238,7 @@ flextable(SmanM_Lgender_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_L_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5295,7 +5295,7 @@ flextable(SmanM_Lage_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_L_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SmanM_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SmanM_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5399,7 +5399,7 @@ flextable(SmanM_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5459,7 +5459,7 @@ flextable(SmanM_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5519,7 +5519,7 @@ flextable(SmanM_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5632,7 +5632,7 @@ flextable(SmanM_Crace_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5691,7 +5691,7 @@ flextable(SmanM_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5748,7 +5748,7 @@ flextable(SmanM_Cage_sumstats1) %>%
 #boxplot reorderd by median
 SmanM_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, SmanM_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, SmanM_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=SmanM_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5856,7 +5856,7 @@ flextable(TrHO_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrHO_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrHO_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrHO_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5914,7 +5914,7 @@ flextable(TrHO_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrHO_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrHO_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrHO_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -5973,7 +5973,7 @@ flextable(TrHO_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrHO_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrHO_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrHO_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6079,7 +6079,7 @@ flextable(TrEJ_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrEJ_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrEJ_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrEJ_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6137,7 +6137,7 @@ flextable(TrEJ_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrEJ_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrEJ_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrEJ_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6196,7 +6196,7 @@ flextable(TrEJ_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrEJ_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrEJ_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrEJ_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6301,7 +6301,7 @@ flextable(TrGo_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6361,7 +6361,7 @@ flextable(TrGo_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6422,7 +6422,7 @@ flextable(TrGo_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6540,7 +6540,7 @@ flextable(TrGo_Crace_sumstats1) %>%
 #boxplot reorderd by median
 TrGo_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6598,7 +6598,7 @@ flextable(TrGo_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 TrGo_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6657,7 +6657,7 @@ flextable(TrGo_Cage_sumstats1) %>%
 #boxplot reorderd by median
 TrGo_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrGo_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrGo_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrGo_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6763,7 +6763,7 @@ flextable(TrSel_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrSel_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrSel_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSel_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6821,7 +6821,7 @@ flextable(TrSel_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrSel_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrSel_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSel_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6880,7 +6880,7 @@ flextable(TrSel_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrSel_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrSel_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSel_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -6986,7 +6986,7 @@ flextable(TrSman_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7046,7 +7046,7 @@ flextable(TrSman_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7107,7 +7107,7 @@ flextable(TrSman_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7219,7 +7219,7 @@ flextable(TrSman_Crace_sumstats1) %>%
 #boxplot reorderd by median
 TrSman_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7277,7 +7277,7 @@ flextable(TrSman_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 TrSman_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7336,7 +7336,7 @@ flextable(TrSman_Cage_sumstats1) %>%
 #boxplot reorderd by median
 TrSman_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrSman_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrSman_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSman_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7439,7 +7439,7 @@ flextable(TrSnas_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7499,7 +7499,7 @@ flextable(TrSnas_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7560,7 +7560,7 @@ flextable(TrSnas_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7674,7 +7674,7 @@ flextable(TrSnas_Crace_sumstats1) %>%
 #boxplot reorderd by median
 TrSnas_C_no_out %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7732,7 +7732,7 @@ flextable(TrSnas_Cgender_sumstats1) %>%
 #boxplot reorderd by median
 TrSnas_C_no_out %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7791,7 +7791,7 @@ flextable(TrSnas_Cage_sumstats1) %>%
 #boxplot reorderd by median
 TrSnas_C_no_out %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrSnas_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrSnas_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrSnas_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7897,7 +7897,7 @@ flextable(TrTr_Crace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrTr_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrTr_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_C, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -7955,7 +7955,7 @@ flextable(TrTr_Cgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrTr_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrTr_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_C, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -8014,7 +8014,7 @@ flextable(TrTr_Cage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrTr_C, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrTr_C, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_C, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -8117,7 +8117,7 @@ flextable(TrTr_Lrace_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(race_eth= fct_reorder(race_eth, TrTr_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(race_eth= fct_reorder(race_eth, TrTr_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_L, x=race_eth))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -8174,7 +8174,7 @@ flextable(TrTr_Lgender_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(gender= fct_reorder(gender, TrTr_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(gender= fct_reorder(gender, TrTr_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_L, x=gender))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -8232,7 +8232,7 @@ flextable(TrTr_Lage_sumstats) %>%
 #boxplot reorderd by median
 headscan_full %>% 
   ungroup() %>% 
-  mutate(age_group= fct_reorder(age_group, TrTr_L, FUN=median, na.rm=TRUE)) %>% 
+  mutate(age_group= fct_reorder(age_group, TrTr_L, .fun=median, na.rm=TRUE)) %>% 
   ggplot(aes(y=TrTr_L, x=age_group))+
   geom_boxplot(color= "black", fill = "white")+
   theme_bw()+theme(text=element_text(family= "Times New Roman"))+
@@ -8343,7 +8343,7 @@ flextable(gender_sumdata_m) %>%
 ```
 
 ```{r}
-zhuang_sumstats<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\PAPER_2\\Zhuang-sumstats.xlsx")
+zhuang_sumstats<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\PAPER_2\\Zhuang-sumstats.xlsx")
 ```
 
 
