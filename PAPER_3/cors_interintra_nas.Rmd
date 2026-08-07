@@ -35,21 +35,21 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r loading data}
-correlation_data_full<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\correlation_data_full.xlsx")
+correlation_data_full<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\correlation_data_full.xlsx")
 
-measureNAs<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\measureNAs.xlsx")
+measureNAs<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\measureNAs.xlsx")
 
-questionable_measures<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\questionable_measures.xlsx")
+questionable_measures<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\questionable_measures.xlsx")
 
-isabel_intra<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\isabel_intra.xlsx")
+isabel_intra<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\isabel_intra.xlsx")
 
-kayna_intra<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\kayna_intra.xlsx")
+kayna_intra<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\kayna_intra.xlsx")
 
-chandler_intra<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chandler_intra.xlsx")
+chandler_intra<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chandler_intra.xlsx")
 
-jared_intra<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\jared_intra.xlsx")
+jared_intra<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\jared_intra.xlsx")
 
-interRR<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\interRR.xlsx")
+interRR<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\interRR.xlsx")
 ```
 
 
