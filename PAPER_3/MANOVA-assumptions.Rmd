@@ -111,7 +111,7 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r}
-SA3_noout <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_nona1.xlsx")
+SA3_noout <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_nona1.xlsx")
 ```
 
 
@@ -176,16 +176,16 @@ fitted1 <- manova_out_nt$fitted.values
 resid1 <- rstandard(manova_out_nt)
 
 #homogeneity (unscaled)
-#plot(fitted1, resid1)
-#abline(0,0)
-#abline(v = 0)
+plot(fitted1, resid1)
+abline(0,0)
+abline(v = 0)
 
 #linearity
-#qqnorm(resid1)
-#abline(0,1, lty=2)
+qqnorm(resid1)
+abline(0,1, lty=2)
 
 #normality
-#hist(resid1)
+hist(resid1)
 ```
 
 
@@ -297,35 +297,35 @@ https://www.researchgate.net/post/What-if-the-Boxs-Test-in-two-way-MANOVA-is-sig
 
 
 
-#```{r}
+```{r}
 HOMOGENEITY(data=SA3_noout, groups='race_eth', variables=c('AA_C', 'BiW_C', 
                                                            'BiW_L', 'GoSub_C',
                                                            'NRB_L', 'ProS_L',
                                                            'SelP_L', 'SelM_L', 
                                                            'SnasM_C','TrSman_C', 
                                                            'TrTr_C', 'TrTr_L'))
-#```
-#```{r}
+```
+```{r}
 HOMOGENEITY(data=SA3_noout, groups='gender', variables=c('AA_C', 'BiW_C', 
                                                            'BiW_L', 'GoSub_C',
                                                            'NRB_L', 'ProS_L',
                                                            'SelP_L', 'SelM_L', 
                                                            'SnasM_C', 'TrSman_C', 
                                                          'TrTr_C', 'TrTr_L'))
-#```
-#```{r}
+```
+```{r}
 HOMOGENEITY(data=SA3_noout, groups='age_group', variables=c('AA_C', 'BiW_C', 
                                                            'BiW_L', 'GoSub_C',
                                                            'NRB_L', 'ProS_L',
                                                            'SelP_L', 'SelM_L', 
                                                            'SnasM_C', 'TrSman_C', 
                                                            'TrTr_C', 'TrTr_L'))
-#```
+```
 
 
 
 
-#```{r}
+```{r}
 boxtest_data <- column_to_rownames(SA3_noout, "ID")
 
 boxtest_data$race_eth <-
@@ -355,8 +355,8 @@ boxM( cbind(AA_C, BiW_C, BiW_L, GoSub_C, NRB_L, ProS_L,
            TrSman_C, TrTr_C, TrTr_L) ~ age_group, data=boxtest_data)
 
 
-#```
-#```{r}
+```
+```{r}
 HOMOGENEITY(data=boxtest_data, groups='race_eth', variables=c('AA_C', 'BiW_C', 
                                                            'BiW_L', 'GoSub_C',
                                                            'NRB_L', 'ProS_L',
@@ -372,16 +372,16 @@ HOMOGENEITY(data=boxtest_data, groups='gender', variables=c('AA_C', 'BiW_C',
                                                            'SelP_L', 'SelM_L', 
                                                            'SnasM_C', 'TrSman_C', 
                                                            'TrTr_C', 'TrTr_L'))
-#```
+```
 
-#```{r}
+```{r}
 HOMOGENEITY(data=boxtest_data, groups='age_group', variables=c('AA_C', 'BiW_C', 
                                                            'BiW_L', 'GoSub_C',
                                                            'NRB_L', 'ProS_L',
                                                            'SelP_L', 'SelM_L', 
                                                            'SnasM_C', 'TrSman_C', 
                                                            'TrTr_C', 'TrTr_L'))
-#```
+```
 
 
 Box’s M test the assumption of equality of covariance matrices. However, Box's M is sensitive to large data files; therefore, it can detect even small departures from homogeneity. Moreover, it can be sensitive to departures from the assumption of normality.
