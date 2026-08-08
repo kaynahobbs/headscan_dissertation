@@ -37,7 +37,7 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r}
-SA3_noout <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_nona1.xlsx")
+SA3_noout <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_nona1.xlsx")
 ```
 
 
@@ -269,16 +269,16 @@ resid1_log <- rstandard(manova_out_log)
 
 
 #homogeneity
-#plot(fitted1_log, resid1_log)
-#abline(0,0)
-#abline(v = 0)
+plot(fitted1_log, resid1_log)
+abline(0,0)
+abline(v = 0)
 
 #linearity
-#qqnorm(resid1_log)
-#abline(0,1, lty=2)
+qqnorm(resid1_log)
+abline(0,1, lty=2)
 
 #normality
-#hist(resid1_log)
+hist(resid1_log)
 ```
 
 ```{r}
@@ -347,16 +347,16 @@ fitted1_sqrt <- manova_out_sqrt$fitted.values
 resid1_sqrt <- rstandard(manova_out_sqrt)
 
 #homogeneity 
-#plot(fitted1_sqrt, resid1_sqrt)
-#abline(0,0)
-#abline(v = 0)
+plot(fitted1_sqrt, resid1_sqrt)
+abline(0,0)
+abline(v = 0)
 
 #linearity
-#qqnorm(resid1_sqrt)
-#abline(0,1, lty=2)
+qqnorm(resid1_sqrt)
+abline(0,1, lty=2)
 
 #normality
-#hist(resid1_sqrt)
+hist(resid1_sqrt)
 ```
 
 ```{r}

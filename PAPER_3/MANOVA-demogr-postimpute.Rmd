@@ -33,7 +33,7 @@ my_ft_theme <- function(ft, ...) {
 ```
 
 ```{r}
-chosen_withna<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_withna.xlsx")
+chosen_withna<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_withna.xlsx")
 
 chosen_withna$gender<-as.factor(chosen_withna$gender)
 chosen_withna$race_eth<-as.factor(chosen_withna$race_eth)
@@ -121,7 +121,7 @@ chosen_withna1 %>%
 
 
 ```{r}
-chosen_nona<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_nona.xlsx")
+chosen_nona<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_nona.xlsx")
 
 chosen_nona$gender<-as.factor(chosen_nona$gender)
 chosen_nona$race_eth<-as.factor(chosen_nona$race_eth)
@@ -214,7 +214,7 @@ chosen_nona1 %>%
 
 
 ```{r}
-chosen_imputed<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_imputed.xlsx")
+chosen_imputed<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_imputed.xlsx")
 
 chosen_imputed$gender<-as.factor(chosen_imputed$gender)
 chosen_imputed$race_eth<-as.factor(chosen_imputed$race_eth)

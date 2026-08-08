@@ -36,7 +36,7 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r}
-measureNAs <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\measureNAs.xlsx")
+measureNAs <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\measureNAs.xlsx")
 
 
 
@@ -83,7 +83,7 @@ ggplot(data=PCA_NAs, aes(x=measure_name, y=measureNAprops))+
 
 ```{r}
 #PCAdata_num <- PCAdata_num %>% drop_na()
-PCAdata_full<-read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_nona.xlsx")
+PCAdata_full<-read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_nona.xlsx")
 
 PCAdata_full$race_eth <- 
   recode_factor(PCAdata_full$race_eth, 'white'= "White")
