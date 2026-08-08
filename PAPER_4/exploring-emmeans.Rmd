@@ -35,24 +35,24 @@ my_ft_theme <- function(ft, ...) {
 
 
 ```{r, fig.height=4.5, fig.width=7}
-gender_means_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\gender_means_data.xlsx")
+gender_means_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\gender_means_data.xlsx")
 
-race_means_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\race_means_data.xlsx")
+race_means_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\race_means_data.xlsx")
 
-age_means_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\age_means_data.xlsx")
+age_means_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\age_means_data.xlsx")
 
 
-gender_est_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\gender_est_data.xlsx")
+gender_est_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\gender_est_data.xlsx")
 
 gender_est_data <- gender_est_data %>% 
   mutate(across(where(is.numeric), round, digits=2))
 
-race_est_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\race_est_data.xlsx")
+race_est_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\race_est_data.xlsx")
 
 race_est_data <- race_est_data %>% 
   mutate(across(where(is.numeric), round, digits=2))
 
-age_est_data <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\age_est_data.xlsx")
+age_est_data <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\age_est_data.xlsx")
 
 age_est_data <- age_est_data %>% 
   mutate(across(where(is.numeric), round, digits=2))
@@ -60,7 +60,7 @@ age_est_data <- age_est_data %>%
 
 
 ```{r, fig.height=4.5, fig.width=7}
-chosen_nona1 <- read_excel("C:\\Users\\19177\\OneDrive - Colostate\\Desktop\\Dissertation\\headscan_dissertation\\chosen_nona1.xlsx")
+chosen_nona1 <- read_excel("C:\\Users\\kayna\\Documents\\headscan_dissertation\\chosen_nona1.xlsx")
 ```
 
 ```{r, fig.height=4.5, fig.width=7}
